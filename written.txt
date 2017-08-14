@@ -1,2 +1,0 @@
-This is the first line of the text.
-This line is appended at the end.
