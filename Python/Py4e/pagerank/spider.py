@@ -1,4 +1,5 @@
 import sqlite3
+import urllib.error
 import ssl
 from urllib.parse import urljoin
 from urllib.parse import urlparse
@@ -116,7 +117,7 @@ while True:
             href = urljoin(url, href)
         ipos = href.find('#')
         if ( ipos > 1 ) : href = href[:ipos]
-        if ( href.endswith('.png') or href.endswith('.jpg') or href.endswith('.gif') or href.endswith('.doc') ) : continue
+        if ( href.endswith('.png') or href.endswith('.jpg') or href.endswith('.gif') ) : continue
         if ( href.endswith('/') ) : href = href[:-1]
         # print href
         if ( len(href) < 1 ) : continue
